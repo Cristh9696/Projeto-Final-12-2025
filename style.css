@@ -19,6 +19,7 @@ body {
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   padding: 2rem;
+  margin: auto;
 }
 
 .profile {
@@ -39,12 +40,14 @@ body {
 .info {
   font-size: 1.2rem;
   font-weight: bolder;
-  display: block;
-  justify-content: center;
-  text-align: right;  
-  align-items: flex-start;
-  margin-top: -7.8rem;
-  margin-right: -11rem;
+  text-align: left;
+}
+
+.avatar_info {
+  display: flex;
+  align-items:center;
+  gap: 2rem;
+  flex-direction: row;
 }
 
 .info h1 {
@@ -56,13 +59,14 @@ body {
 
 .info p {
   margin: 4px 0 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 400;
   color: #94a3b8;
   text-align: center;
 }
 
 .intro {
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 a {
@@ -71,6 +75,8 @@ a {
 }
 
 a:hover {
+  text-decoration: underline;
+  color: #7dd3fc;
   text-decoration: underline;
 }
 
@@ -96,6 +102,7 @@ a:hover {
 
 .social-links a:hover {
   background: #334155;
+  transform: scale(1.05);
 }
 
 #welcome {
@@ -137,7 +144,8 @@ button {
 }
 
 button:hover {
-  background: #7dd3fc;
+  background-color: #7dd3fc;
+  transform: scale(1.05);
 }
 
 footer {
@@ -146,4 +154,39 @@ footer {
   font-size: 0.9rem;
   color: #94a3b8;
 }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 1rem;
+  }
+
+  .avatar_info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    font-size: 14px;
+    padding: 1rem;
+  }
+
+  .avatar_info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 
